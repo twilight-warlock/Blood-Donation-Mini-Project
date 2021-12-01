@@ -1,24 +1,34 @@
 <?php
 if (isset($_POST['submitBtn'])) {
-    $firstName = $_POST['firstName'];
-    $lastName = $_POST['lastName'];
-    $email = $_POST['email'];
-    $dob = $_POST['dob'];
-    $gender = $_POST['gender'];
-    $address = $_POST['address'];
-    $city = $_POST['city'];
-    $mobile = $_POST['mobile'];
-    $bType = $_POST['blood_group'];
-    
-    require_once 'php/DBConnect.php';
-    $db = new DBConnect();
-    $flag = $db->registerUser($firstName, $lastName, $email, $dob, $gender, $bType, $address, $city, $mobile);
-    
-    if($flag){
-        $success = "Thank You for registering with us.";
-    } else {
-        $message = "There was some technical error. Try again!";
-    }
+	$firstName = $_POST['firstName'];
+	$lastName = $_POST['lastName'];
+	$email = $_POST['email'];
+	$dob = $_POST['dob'];
+	$gender = $_POST['gender'];
+	$address = $_POST['address'];
+	$city = $_POST['city'];
+	$mobile = $_POST['mobile'];
+	$bType = $_POST['blood_group'];
+
+	require_once 'php/DBConnect.php';
+	$db = new DBConnect();
+	$flag = $db->registerUser(
+		$firstName,
+		$lastName,
+		$email,
+		$dob,
+		$gender,
+		$bType,
+		$address,
+		$city,
+		$mobile
+	);
+
+	if ($flag) {
+		$success = "Thank You for registering with us.";
+	} else {
+		$message = "There was some technical error. Try again!";
+	}
 }
 
 $title = "Join Us";
@@ -32,11 +42,11 @@ include 'layout/navbar.php';
     <div class="col-md-3"></div>
     <div class="col-md-6">
         
-        <?php if(isset($success)): ?>
-        <div class="alert-success fade-out-5"><?= $success; ?></div>
+        <?php if (isset($success)): ?>
+        <div class="alert-success fade-out-5"><?= $success ?></div>
         <?php endif; ?>
-        <?php if(isset($message)): ?>
-        <div class="alert-danger fade-out-5"><?= $message; ?></div>
+        <?php if (isset($message)): ?>
+        <div class="alert-danger fade-out-5"><?= $message ?></div>
         <?php endif; ?>
         
         <div class="panel panel-default">

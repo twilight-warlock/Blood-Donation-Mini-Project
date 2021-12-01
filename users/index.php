@@ -5,15 +5,26 @@ include 'layout/_header.php';
 
 include 'layout/navbar.php';
 ?>
-<div class="container">
+<div class="container" style="margin-bottom: 25px;">
+
     <div class="row">
-        <div class="col-md-9">
-            <a style="font-size: 40px; color: rgb(146, 15, 15); font-family: 'Poppins', sans-serif;">Why Are We Here For?</a>
+        <div class="col-md-6">
+            <div style="font-size: 40px; color: #da0028; ">Why are we here for?</div>
             <p id="About">
                 Blood Bank Management System (BBMS) is a browser based system that is designed to store, process, retrieve and analyze information concerned with the administrative and inventory management within a blood bank. This project aims at maintaining all the information pertaining to blood donors, different blood groups available in each blood bank and help them manage in a better way. Aim is to provide transparency in this field, make the process of obtaining blood from a blood bank hassle free and corruption free and make the system of blood bank management effective.
             </p>
-            <hr id="line_1">
-            <a style="font-size: 40px; color: rgb(146, 15, 15); font-family: 'Poppins', sans-serif;">Features of Our System</a>
+        </div>
+        <div class="col-md-6">
+            <img src="../assets/home1.jpg" class="img img-responsive" style="width:80%; margin:auto; border-radius:5px">
+        </div>
+    </div>
+    <hr id="line_1">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="../assets/home2.jpg" class="img img-responsive" style="width:80%; margin:auto; border-radius:5px">
+        </div>
+        <div class="col-md-6">
+            <div style="font-size: 40px; color: #da0028;">Features of our System</div>
             <p>
                 - Blood Donation Camp & Camp Organiser Management.<br>
                 - Donor Management - Donor Registration, Managing donor database, recording their physical and medical statistics.<br>
@@ -28,12 +39,6 @@ include 'layout/navbar.php';
                 - Camp Wise Donor List and Printing of Donor Cards.<br>
             </p>
         </div>
-        <div class="col-md-3">
-            <img src="../assets/donate_blood_right.jpg" class="img img-responsive">
-        </div>
-
-
-
     </div>
 </div>
 
