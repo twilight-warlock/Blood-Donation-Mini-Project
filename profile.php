@@ -8,8 +8,10 @@ $flag = $db->checkAuth();
 $donor = $db->getDonorProfileById($id);
 
 $title = "Donor Profile";
+
 include 'layout/_header.php';
-include 'users/layout/navbar.php';
+
+include 'layout/_top_nav.php';
 
 if($flag){
     include 'layout/_top_nav.php';
@@ -99,5 +101,7 @@ if($flag){
         <div class="col-sm-1"></div>
     </div>
 </div>
+
+<br><br>
 
 <?php include 'layout/_footer.php'; ?>

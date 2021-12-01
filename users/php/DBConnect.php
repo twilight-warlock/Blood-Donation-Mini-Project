@@ -49,10 +49,6 @@ class DBConnect {
         $stmt = $this->db->prepare("SELECT * FROM donors");
         $stmt->execute();
         return $stmt->fetchAll();
-    }
-    
-    
-    
-    
+    }    
     
 }

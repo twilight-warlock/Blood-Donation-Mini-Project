@@ -113,13 +113,13 @@ include 'layout/_top_nav.php';
                         <div class="form-group">
                             <label class="col-sm-4">Mobile</label>
                             <div class="col-sm-8">
-                                <input type="text" name="mobile" class="form-control" required="true">
+                                <input type="number" name="mobile" class="form-control" required="true">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-4">Phone</label>
                             <div class="col-sm-8">
-                                <input type="text" name="phone" class="form-control">
+                                <input type="number" name="phone" class="form-control">
                             </div>
                         </div>           
                     </div>
@@ -136,7 +136,7 @@ include 'layout/_top_nav.php';
                         <div class="form-group">
                             <label class="col-sm-4">Temperature</label>
                             <div class="col-sm-8">
-                                <input type="decimar" name="temp" value="" required="true" class="form-control"/>
+                                <input type="text" name="temp" value="" required="true" class="form-control"/>
                             </div>
                         </div>
                         <div class="form-group">

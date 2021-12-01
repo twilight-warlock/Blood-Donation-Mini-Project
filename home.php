@@ -103,7 +103,7 @@ include 'layout/_top_nav.php';
                         }
                         ?>" >
                             <td><?= $i; ?></td>
-                            <td><a href="profile.php?id=<?= $d['id']; ?>"><?= $d['fname'] . " " . $d['mname'] . " " . $d['lname']; ?></a></td>
+                            <td><?= $d['fname'] . " " . $d['mname'] . " " . $d['lname']; ?></td>
                             <td><?= $d['sex']; ?></td>
                             <td><?= wordwrap($d['h_address'], 20, "<br>"); ?></td>
                             <td><?= $d['city']; ?></td>
