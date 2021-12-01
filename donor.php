@@ -1,4 +1,5 @@
 <?php
+
 $success=NULL;$message=NULL;
 if(isset($_POST['submitBtn'])){
     $fname = $_POST['firstName'];
@@ -13,21 +14,16 @@ if(isset($_POST['submitBtn'])){
     $phone = $_POST['phone'];
     //Medical Information
     $donationDate = $_POST['don_date'];
-    $stats = $_POST['stats'];
     $temp = $_POST['temp'];
     $pulse = $_POST['pulse'];
     $bp = $_POST['bp'];
     $weight = $_POST['weight'];
-    $hemoglobin = $_POST['hemoglobin'];
-    $hbsag = $_POST['hbsag'];
-    $aids = $_POST['aids'];
-    $malariaSmear = $_POST['malariaSmear'];
-    $hematocrit = $_POST['hematocrit'];
+    $haemoglobin = $_POST['haemoglobin'];
 
     require_once 'php/DBConnect.php';
     $db = new DBConnect();
-    $flag = $db->addDonor($fname, $mname, $lname, $sex, $bType, $dob, $address, $city, $donationDate, $stats, $temp,
-            $pulse, $bp, $weight, $hemoglobin, $hbsag, $aids, $malariaSmear, $hematocrit, $mobile, $phone);
+    $flag = $db->addDonor($fname, $mname, $lname, $sex, $bType, $dob, $address, $city, $donationDate, $temp,
+            $pulse, $bp, $weight, $haemoglobin, $mobile, $phone);
     
     if($flag){
         $success = "The donor has been successfully added to the database!";
@@ -58,7 +54,7 @@ include 'layout/_top_nav.php';
             <form method="post" class="form-horizontal" role="form" action="donor.php">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h5>Donor Basic Info</h5>
+                        <h5 style="font-size: 30px; font-weight: bold; color: rgb(146, 15, 15); font-family: 'Poppins', sans-serif;">Donor Basic Info</h5>
                     </div>
                     <div class="panel-body">
                         <div class="form-group">
@@ -76,9 +72,9 @@ include 'layout/_top_nav.php';
                         <div class="form-group">
                             <label class="col-sm-4">Gender</label>
                             <div class="col-sm-4 radio-inline">
-                                <input type="radio" value="male" name="sex" checked="true">Male                         
+                                <input type="radio" value="male" name="sex" checked="true">&nbsp;Male                         
                             </div>
-                            <input type="radio" value="female" name="sex">Female                          
+                            <input type="radio" value="female" name="sex">&nbsp;Female                          
 
                         </div>
                         <div class="form-group">
@@ -97,7 +93,7 @@ include 'layout/_top_nav.php';
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-4">D.O.B</label>
+                            <label class="col-sm-4">Date of Birth</label>
                             <div class="col-sm-8">
                                 <input type="date" name="dob" class="form-control" required="true">
                             </div>
@@ -117,30 +113,24 @@ include 'layout/_top_nav.php';
                         <div class="form-group">
                             <label class="col-sm-4">Mobile</label>
                             <div class="col-sm-8">
-                                <input type="number" min="0" max="10000000000" name="mobile" class="form-control" required="true">
+                                <input type="text" name="mobile" class="form-control" required="true">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-4">Phone</label>
                             <div class="col-sm-8">
-                                <input type="number" min="0" max="10000000000" name="phone" class="form-control">
+                                <input type="text" name="phone" class="form-control">
                             </div>
                         </div>           
                     </div>
                     <div class="panel-heading">
-                        <h5>Donor Medical Info</h5>
+                        <h5 style="font-size: 30px; font-weight: bold; color: rgb(146, 15, 15); font-family: 'Poppins', sans-serif;">Donor Medical Info</h5>
                     </div>
                     <div class="panel-body">
                         <div class="form-group">
                             <label class="col-sm-4">Date of Donation</label>
                             <div class="col-sm-8">
                                 <input type="date" name="don_date" value="" required="true" class="form-control"/>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-4">Statistics</label>
-                            <div class="col-sm-8">
-                                <input type="text" name="stats" value="" required="true" class="form-control"/>
                             </div>
                         </div>
                         <div class="form-group">
@@ -168,33 +158,9 @@ include 'layout/_top_nav.php';
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-4">Hemoglobin</label>
+                            <label class="col-sm-4">Haemoglobin</label>
                             <div class="col-sm-8">
-                                <input type="text" name="hemoglobin" value="" required="true" class="form-control"/>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-4">HBsAg </label>
-                            <div class="col-sm-8">
-                                <input type="text" name="hbsag" value="" required="true" class="form-control"/>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-4">Aids </label>
-                            <div class="col-sm-8">
-                                <input type="text" name="aids" value="" required="true" class="form-control"/>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-4">Malaria Smear </label>
-                            <div class="col-sm-8">
-                                <input type="text" name="malariaSmear" value="" required="true" class="form-control"/>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-4">Hematocrit </label>
-                            <div class="col-sm-8">
-                                <input type="text" name="hematocrit" value="" required="true" class="form-control"/>
+                                <input type="text" name="haemoglobin" value="" required="true" class="form-control"/>
                             </div>
                         </div>
                         

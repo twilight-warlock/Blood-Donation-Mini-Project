@@ -3,9 +3,10 @@
     padding: 0px;
 }*/
 body{
-
+    left: 0;
+    top: 0;
     padding-top: 3.5em;
-    background-image: url("../assets/bg_image.jpg");
+    /* background-image: url("../assets/bg_image.jpg"); */
 }
 table{
     font-family: tahoma;
@@ -16,11 +17,7 @@ h5{
     font-family: "Cantarell",cursive;
     color: crimson;
 }
-.index-container{
-}
-.loginBtn{
 
-}
 .emphasize{
     font-weight: bold;
     font-size: large;
@@ -36,14 +33,6 @@ footer{
     color: white;
 }
 
-#Heading{
-    font-size: 60px;
-    color: grey;
-    font-family: comic sans ms;
-}
-#Heading:hover{
-    color: darkred;
-}
 #About{
     font-family: tahoma ;
 }
@@ -51,12 +40,4 @@ footer{
     width: 1140px;
     color: black;
 
-}
-#Heading2{
-    font-size: 60px;
-    color: grey;
-    font-family: comic sans ms;
-}
-#Heading2:hover{
-    color: darkred;
 }

@@ -4,13 +4,13 @@
         <div class="row">
             <div class="col-md-2">
                 <div class="logo-left-15 pull-left">
-                    <div class="h4" id="logo"><a href="index.php">Blood Bank </a></div>
+                    <div class="h4" id="logo"><a href="index.php" style="font-family: 'Poppins', sans-serif; text-color: white;">Blood Bank</a></div>
                 </div>
             </div>
             <div class="col-md-2"></div>
             <div class="col-md-8">
                 <div class="pull-right">
-                    <ul class="nav nav-pills">
+                    <ul class="nav nav-pills" style="font-family: 'Poppins', sans-serif;">
                         <li class="<?php
                         if (isset($setHomeActive)) {
                             echo $setHomeActive;

@@ -8,7 +8,7 @@
 /**
  * Description of DBConnect
  *
- * @author Vaibhav
+ * @author Arya + Devansh
  */
 class DBConnect {
     private $db = NULL;
@@ -41,6 +41,12 @@ class DBConnect {
     }
     public function getUsers(){
         $stmt = $this->db->prepare("SELECT * FROM users");
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
+
+    public function getDonors(){
+        $stmt = $this->db->prepare("SELECT * FROM donors");
         $stmt->execute();
         return $stmt->fetchAll();
     }

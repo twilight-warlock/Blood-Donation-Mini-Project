@@ -20,6 +20,7 @@ if (isset($_POST['submitBtn'])) {
         $message = "There was some technical error. Try again!";
     }
 }
+
 $title = "Join Us";
 $setJoinUsActive = "active";
 include 'layout/_header.php';
@@ -47,7 +48,7 @@ include 'layout/navbar.php';
                     with us that you are ready to donate and will be available whenever we will need you.</p>               
             </div>
             <div class="panel-body">
-                <form method="post" action="register.php" class="form-horizontal">
+                <form method="post" action="sendemail.php" class="form-horizontal">
                     <div class="form-group">
                         <label class="col-md-4 form-label">Name</label>
                         <div class="col-md-4">
@@ -64,16 +65,16 @@ include 'layout/navbar.php';
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="form-label col-md-4">D.O.B</label>
+                        <label class="form-label col-md-4">Date of Birth</label>
                         <div class="col-md-8">
-                            <input type="date" required="true" class="form-control" name="dob" >
+                            <input type="date" class="form-control" name="dob" >
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="form-label col-md-4">Gender</label>
                         <div class="col-md-8">
-                            <input type="radio" value="Male" checked="true" class="radio-inline" name="gender" >Male
-                            <input type="radio" value="Female" class="radio-inline" name="gender" >Female
+                            <input type="radio" value="Male" checked="true" class="radio-inline" name="gender">&nbsp;Male
+                            <input type="radio" value="Female" class="radio-inline" name="gender">&nbsp;Female
                         </div>
                     </div>
                     <div class="form-group">
@@ -94,7 +95,7 @@ include 'layout/navbar.php';
                     <div class="form-group">
                         <label class="form-label col-md-4">Address</label>
                         <div class="col-md-8">
-                            <textarea required="true" minlength="5" class="form-control" name="address" 
+                            <textarea minlength="5" class="form-control" name="address" required="true"
                                       rows="6" placeholder="Please fill out your complete address."></textarea>
                         </div>
                     </div>
@@ -107,13 +108,13 @@ include 'layout/navbar.php';
                     <div class="form-group">
                         <label class="form-label col-md-4">Mobile</label>
                         <div class="col-md-8">
-                            <input type="number" required="true" class="form-control" name="mobile" >
+                            <input type="text" required="true" class="form-control" name="mobile" >
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="form-label col-md-4"></label>
                         <div class="col-md-8">
-                            <button class="btn btn-success" name="submitBtn" >Join</button>
+                            <button class="btn btn-danger" name="submitBtn">Click Here to Receive Email</button>
                         </div>
                     </div>
                 </form>

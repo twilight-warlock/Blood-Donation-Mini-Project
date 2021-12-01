@@ -21,6 +21,7 @@ include 'layout/navbar.php';
             <form class="form-inline" role='form' method="post" action="availability.php">
                 <label class="form-label">Select Blood Group: </label>
                 <select name="blood_group" class="form-control">
+                    <option value="Select">Select</option>
                     <option value="O+">O+</option>
                     <option value="O-">O-</option>
                     <option value="A+">A+</option>

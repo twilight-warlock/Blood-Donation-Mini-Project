@@ -8,10 +8,10 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php">Blood Bank</a>
+          <a class="navbar-brand" href="index.php" style="font-family: 'Poppins', sans-serif; text-color: white;">Blood Bank</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav navbar-right" style="font-family: 'Poppins', sans-serif;">
              <li class="<?php
                         if (isset($setHomeActive)) {
                             echo $setHomeActive;
@@ -28,7 +28,7 @@
                         ?>"><a href="donor.php">New Donor</a></li>
                         
                         <li class="<?php if(isset($setMemberActive)) { echo $setMemberActive; } else { echo ''; } ?>">
-                            <a href="members.php">Our Members</a>
+                            <a href="members.php">Our Donors</a>
                         </li>
 <!--                        <li class="<?php //if(isset($setBloodRequestActive)){ echo $setBloodRequestActive; } else { echo ''; } ?>">
                             <a href="blood_request.php">Blood Requests</a>

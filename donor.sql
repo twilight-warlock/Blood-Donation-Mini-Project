@@ -31,16 +31,11 @@ CREATE TABLE IF NOT EXISTS `donors` (
   `h_address` varchar(50) NOT NULL,
   `city` varchar(30) NOT NULL,
   `don_date` date NOT NULL,
-  `stats` text NOT NULL,
   `temp` varchar(10) NOT NULL,
   `pulse` varchar(10) NOT NULL,
   `bp` varchar(10) NOT NULL,
   `weight` int(11) NOT NULL,
-  `hemoglobin` varchar(25) NOT NULL,
-  `hbsag` varchar(10) NOT NULL,
-  `aids` varchar(15) NOT NULL,
-  `malaria_smear` varchar(20) NOT NULL,
-  `hematocrit` varchar(15) NOT NULL,
+  `haemoglobin` varchar(25) NOT NULL,
   `phone` varchar(10) DEFAULT NULL,
   `mobile` varchar(11) NOT NULL,
   PRIMARY KEY (`id`)
@@ -50,10 +45,11 @@ CREATE TABLE IF NOT EXISTS `donors` (
 -- Dumping data for table `donors`
 --
 
-INSERT INTO `donors` (`id`, `fname`, `mname`, `lname`, `sex`, `b_type`, `bday`, `h_address`, `city`, `don_date`, `stats`, `temp`, `pulse`, `bp`, `weight`, `hemoglobin`, `hbsag`, `aids`, `malaria_smear`, `hematocrit`, `phone`, `mobile`) VALUES
-(30, 'Varun', '', 'Shrivastava', 'male', 'O+', '1994-07-16', '2647, Azad Nagar\r\nRanjhi , Front Of Goswami Buildi', 'Jabalpur', '2015-04-18', 'Normal', '30', '60', '80 | 120', 64, '16 - 18 gm/dl', 'Negative', 'Negative', 'Negative', '45 - 62%', '2632181', '9827983762'),
-(31, 'Priyanka', '', 'Yadav', 'female', 'A+', '1994-02-02', 'Somewhere near Panehra', 'Jabalpur', '2015-04-18', 'Normal', '30', '60', '80 | 120', 64, '16 - 18 gm/dl', 'Negative', 'Negative', 'Negative', '45 - 62%', '', '8602042302'),
-(32, 'Diksha', '', 'Gupta', 'female', 'O+', '1994-09-24', 'SBI Colony, Baldev Bagh\r\n', 'Jabalpur', '2015-04-19', 'Normal', '30', '70', '80 | 120', 52, '16 - 18 gm/dl', 'Negative', 'Negative', 'Negative', '45 - 62%', '', '8269036096');
+INSERT INTO `donors` (`id`, `fname`, `mname`, `lname`, `sex`, `b_type`, `bday`, `h_address`, `city`, `don_date`, `temp`, `pulse`, `bp`, `weight`, `haemoglobin`, `phone`, `mobile`) VALUES
+(1, 'Varun', '', 'Singh', 'Male', 'O+', '1994-07-16', '19, Shriram Mandir, Durgadevi Street, Kumbharwada', 'Mumbai', '2021-11-18', 'Normal', '72', '120/80', 74, '16 - 18 gm/dl', '26321812', '9827983762'),
+(2, 'Priyanka', '', 'Yadav', 'Female', 'A+', '1992-02-02', '41, 285, Chatrabhuj J. House, Princess Street, Chira Bazar', 'Mumbai', '2021-11-18', 'Normal', '63', '128/80', 57, '16 - 18 gm/dl', '', '8602042302'),
+(3, 'Palak', '', 'Gupta', 'Female', 'B-', '1989-09-24', 'SBI Colony, Baldev Bagh', 'Mumbai', '2021-11-19', 'Normal', '82', '130/90', 62, '16 - 18 gm/dl', '', '8269036096'),
+(4, 'Anish', '', 'Kothari', 'Male', 'AB+', '1981-08-21', '329, Hiren Light Indl Est, Mogul Lane, Mahim', 'Mumbai', '2021-11-20', 'Normal', '73', '135/80', 65, '16 - 18 gm/dl', '24461198', '7027168011');
 
 -- --------------------------------------------------------
 
@@ -69,21 +65,18 @@ CREATE TABLE IF NOT EXISTS `employees` (
   `username` varchar(15) NOT NULL,
   `password` varchar(15) NOT NULL,
   `b_day` date NOT NULL,
-  `prc_nr` int(25) NOT NULL,
   `designation` varchar(35) NOT NULL,
-  `landline` varchar(10) DEFAULT NULL,
   `mobile_nr` varchar(11) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `username` (`username`),
-  UNIQUE KEY `prc_nr` (`prc_nr`)
+  UNIQUE KEY `username` (`username`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
 
 --
 -- Dumping data for table `employees`
 --
 
-INSERT INTO `employees` (`id`, `f_name`, `m_name`, `l_name`, `username`, `password`, `b_day`, `prc_nr`, `designation`, `landline`, `mobile_nr`) VALUES
-(11, 'Varun', '', 'Shrivastava', 'vs_lala', '123', '1994-07-16', 2147483647, 'Student', '2632181', '9827983762');
+INSERT INTO `employees` (`id`, `f_name`, `m_name`, `l_name`, `username`, `password`, `b_day`, `designation`, `mobile_nr`) VALUES
+(1, 'Arya', '', 'Karambelkar', 'arya', 'arya', '2001-09-19', 'Student', '1111111111');
 
 -- --------------------------------------------------------
 
@@ -112,6 +105,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `email`, `dob`, `gender`, `b_type`, `address`, `city`, `mobile`, `created_at`) VALUES
-(1, 'Varun', 'Shrivastava', 'varunshrivastava007@gmail.com', '1994-07-16', 'Male', 'O+', '2647, Azad Nagar\r\nRanjhi , Front Of Goswami Building', 'Jabalpur', '9827983762', '2015-04-19 17:12:26'),
-(2, 'Diksha', 'Gupta', 'diksha24gupta24@gmail.com', '1994-09-24', 'Female', 'B+', 'State Bank Colony,\r\nSingle Story,\r\nBal Dev Bagh\r\n', 'Jabalpur', '8269036096', '2015-04-28 10:08:46'),
-(3, 'Vaibhav', 'Shrivastava', 'iammagnificient@gmail.com', '2000-02-15', 'Male', 'O+', '2631, Azad Nagar,\r\nRanjhi, Jabalpur', 'Jabalpur', '8871479418', '2015-04-30 06:27:06');
+(1, 'Varun', 'Singh', 'varunsingh@gmail.com', '1994-07-16', 'Male', 'O+', '19, Shriram Mandir, Durgadevi Street, Kumbharwada', 'Mumbai', '9827983762', '2021-11-18 10:08:46'),
+(2, 'Priyanka', 'Yadav', 'priyanka@gmail.com', '1992-02-02', 'Female', 'A+', '41, 285, Chatrabhuj J. House, Princess Street, Chira Bazar', 'Mumbai', '8602042302', '2021-11-18 11:52:27'),
+(3, 'Palak', 'Gupta', 'palakgupta@gmail.com', '1989-09-24', 'Female', 'B-', 'SBI Colony, Baldev Bagh', 'Mumbai', '8269036096', '2021-11-19 06:27:06'),
+(4, 'Anish', 'Kothari', 'anish@gmail.com', '1981-08-21', 'Male', 'AB+', '329, Hiren Light Indl Est, Mogul Lane, Mahim', 'Mumbai', '7027168011', '2021-11-20 09:01:38');
+

@@ -8,7 +8,7 @@
 /**
  * Description of DBConnect
  *
- * @author Vaibhav
+ * @author Arya & Devansh
  */
 class DBConnect {
     private $db = NULL;

@@ -2,26 +2,22 @@
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-10">
-            <?php if(isset($users)): $i++;?>
+            <?php if(isset($donors)): $i++;?>
             <table class="table table-condensed">
                 <thead>
                 <th>Name</th>
-                <th>Email</th>
-                <th>D.O.B</th>
                 <th>Gender</th>
                 <th>Blood Group</th>
                 <th>Address</th>
                 <th>City</th>
                 <th>Mobile</th>
                 </thead>
-                <?php foreach($users as $u): $i++;?>
+                <?php foreach($donors as $u): $i++;?>
                 <tr class="<?php if($i%2==0){echo $bg_background;}else{echo 'bg-light';} ?>">
-                    <td><?= $u['first_name']." ".$u['last_name']; ?></td>
-                    <td><?= $u['email']; ?></td>
-                    <td><?= $u['dob']; ?></td>
-                    <td><?= $u['gender']; ?></td>
+                    <td><?= $u['fname']." ".$u['mname']." ".$u['lname']; ?></td>
+                    <td><?= $u['sex']; ?></td>
                     <td><?= $u['b_type']; ?></td>
-                    <td><?= wordwrap($u['address'], 26, '<br>'); ?></td>
+                    <td><?= wordwrap($u['h_address'], 26, '<br>'); ?></td>
                     <td><?= $u['city']; ?></td>
                     <td><?= $u['mobile']; ?></td>
                 </tr>

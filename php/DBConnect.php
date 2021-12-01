@@ -1,14 +1,8 @@
 <?php
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  * Description of DBConnect
  *
- * @author Vaibhav
+ * @author Arya + Devansh
  */
 class DBConnect {
     private $db = NULL;
@@ -66,11 +60,7 @@ class DBConnect {
                 $_SESSION['middleName'] = $e['m_name'];
                 $_SESSION['lastName'] = $e['l_name'];
                 $_SESSION['birthDay'] = $e['b_day'];
-                $_SESSION['pcrNumber'] = $e['prc_nr'];
-                $_SESSION['designation'] = $e['designation'];
-                $_SESSION['landline'] = $e['landline'];
-                $_SESSION['mobile'] = $e['mobile'];
-                
+                $_SESSION['mobile'] = $e['mobile'];                
             }
             
             return true;
@@ -79,13 +69,13 @@ class DBConnect {
         }
     }
     
-    public function addDonor($fname,$mname,$lname,$sex,$bType,$dob,$hAddress,$city,$donationDate,$stats,$temp,
-            $pulse,$bp,$weight,$hemoglobin,$hbsag,$aids,$malariaSmear,$hematocrit,$mobile,$phone){
-        $stmt = $this->db->prepare("INSERT INTO donors (fname,mname,lname,sex,b_type,bday,h_address,city,don_date,stats,temp,pulse,bp,weight,"
-                . "hemoglobin,hbsag,aids,malaria_smear,hematocrit,mobile,phone)"
-                . "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
-        $stmt->execute([$fname,$mname,$lname,$sex,$bType,$dob,$hAddress,$city,$donationDate,$stats,$temp,$pulse,$bp,$weight,
-            $hemoglobin,$hbsag,$aids,$malariaSmear,$hematocrit,$mobile,$phone]);
+    public function addDonor($fname, $mname, $lname, $sex, $bType, $dob, $address, $city, $donationDate, $temp,
+    $pulse, $bp, $weight, $haemoglobin, $mobile, $phone){
+        $stmt = $this->db->prepare("INSERT INTO donors (fname,mname,lname,sex,b_type,bday,h_address,city,don_date,temp,pulse,bp,weight,"
+                . "haemoglobin,mobile,phone)"
+                . "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+        $stmt->execute([$fname,$mname,$lname,$sex,$bType,$dob,$address,$city,$donationDate,$temp,$pulse,$bp,$weight,
+            $haemoglobin,$mobile,$phone]);
         return true;
         
     }

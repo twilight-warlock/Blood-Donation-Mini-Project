@@ -8,11 +8,11 @@ if (isset($_POST['searchBtn'])) {
     $bloodGroup = $_POST['blood_group'];
     $donors = $db->searchDonorWithBloodGroup($bloodGroup);
 }
-//Search By City
-if (isset($_POST['searchByCityBtn'])) {
-    $city = $_POST['city'];
-    $donors = $db->searchDonorByCity($city);
-}
+// //Search By City
+// if (isset($_POST['searchByCityBtn'])) {
+//     $city = $_POST['city'];
+//     $donors = $db->searchDonorByCity($city);
+// }
 $title = "Home";
 $setHomeActive = "active";
 include 'layout/_header.php';
@@ -29,6 +29,7 @@ include 'layout/_top_nav.php';
                         <label class="col-sm-6">Search for donor with blood group </label>
                         <div class="col-sm-4">
                             <select name="blood_group" class="form-control">
+                                <option value="Select">Select</option>
                                 <option value="O+">O+</option>
                                 <option value="O-">O-</option>
                                 <option value="A+">A+</option>
@@ -45,7 +46,7 @@ include 'layout/_top_nav.php';
                     </div>
 
                 </form>
-                <form class="form-horizontal" method="post" action="home.php">
+                <!-- <form class="form-horizontal" method="post" action="home.php">
                     <div class="form-group">
                         <label class="col-sm-6">Search for donor by city </label>
                         <div class="col-sm-4">
@@ -56,7 +57,7 @@ include 'layout/_top_nav.php';
                         </div>
                     </div>
 
-                </form>
+                </form> -->
             </div>
         </div>
         <div class="col-md-3"></div>

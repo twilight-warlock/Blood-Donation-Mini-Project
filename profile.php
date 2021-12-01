@@ -9,6 +9,7 @@ $donor = $db->getDonorProfileById($id);
 
 $title = "Donor Profile";
 include 'layout/_header.php';
+include 'users/layout/navbar.php';
 
 if($flag){
     include 'layout/_top_nav.php';
@@ -17,12 +18,14 @@ if($flag){
 ?>
 
 <div class="container">
+    <marquee style="font-size: 40px; color: rgb(146, 15, 15); font-family: 'Poppins', sans-serif;">Profile Information</marquee>
+    <br><br>
     <div class="row">
         <div class="col-sm-1"></div>
         <div class="col-md-5">
-            <div class="panel panel-success">
+            <div class="panel panel-danger">
                 <div class="panel-heading">
-                    <h5>Basic Info</h5>
+                    <h5 style="font-size: 30px; font-weight: bold; color: black; font-family: 'Poppins', sans-serif;">Basic Info</h5>
                 </div>
                 <div class="panel-body">
                     <table class="table table-condensed">
@@ -59,19 +62,15 @@ if($flag){
             </div>
         </div>
         <div class="col-md-5">
-            <div class="panel panel-success">
+            <div class="panel panel-danger">
                 <div class="panel-heading">
-                    <h5>Medical Info</h5>
+                    <h5 style="font-size: 30px; font-weight: bold; color: black; font-family: 'Poppins', sans-serif;">Medical Info</h5>
                 </div>
                 <div class="panel-body">
                     <table class="table table-condensed">
                         <tr>
                             <td><label>Blood Type</label></td>
                             <td><?= $donor[0]['b_type']; ?></td>
-                        </tr>
-                        <tr>
-                            <td><label>Statistics</label></td>
-                            <td><?= $donor[0]['stats']; ?></td>
                         </tr>
                         <tr>
                             <td><label>Temperature</label></td>
@@ -90,24 +89,8 @@ if($flag){
                             <td><?= $donor[0]['weight']; ?></td>
                         </tr>
                         <tr>
-                            <td><label> Hemoglobin </label></td>
-                            <td><?= $donor[0]['hemoglobin']; ?></td>
-                        </tr>
-                        <tr>
-                            <td><label> HBsAG </label></td>
-                            <td><?= $donor[0]['hbsag']; ?></td>
-                        </tr>
-                        <tr>
-                            <td><label> Aids </label></td>
-                            <td><?= $donor[0]['aids']; ?></td>
-                        </tr>
-                        <tr>
-                            <td><label> Malaria Smear </label></td>
-                            <td><?= $donor[0]['malaria_smear']; ?></td>
-                        </tr>
-                        <tr>
-                            <td><label> Hematocrit </label></td>
-                            <td><?= $donor[0]['hematocrit']; ?></td>
+                            <td><label> Haemoglobin </label></td>
+                            <td><?= $donor[0]['haemoglobin']; ?></td>
                         </tr>
                     </table>
                 </div>
