@@ -42,18 +42,17 @@ include 'layout/navbar.php';
                     <th>Name</th>
                     <th>Gender</th>
                     <th>D.O.B</th>
-                    <th>Address</th>
                     <th>City</th>
                     <th>Blood Group</th>
                     </thead>
                     
                     <?php foreach($donors as $d): $i++;?>
                     
-                    <tr class="<?php if($i%2==0){echo 'bg-danger';} else{echo 'bg-success';} ?>">
-                        <td><a href="../profile.php?id=<?= $d['id']; ?>"><?= $d['fname'] ." ".$d['mname']." ".$d['lname']; ?></a></td>
+                    <tr class="<?php if($i%2==0){echo 'bg-danger';} else{echo 'bg-light';} ?>">
+                        <!-- <td><a href="../profile.php?id=<?= $d['id']; ?>"><?= $d['fname'] ." ".$d['mname']." ".$d['lname']; ?></a></td> -->
+                        <td><?= $d['fname'] ." ".$d['mname']." ".$d['lname']; ?></td>
                         <td><?= $d['sex']; ?></td>
                         <td><?= $d['bday']; ?></td>
-                        <td><?= wordwrap($d['h_address'],26,'<br>' ); ?></td>
                         <td><?= $d['city']; ?></td>
                         <td><?= $d['b_type']; ?></td>
                     </tr>

@@ -43,7 +43,7 @@ $mail->Body    = $bodyContent;
 
 // Send email
 if($mail->send()) {
-    header("Location: http://localhost/BDManagement/users/register.php");
+    header("Location: http://localhost/WP/Blood-Donation-Mini-Project/users/register.php");
 } else {
     echo 'Message could not be sent. Mailer Error: '.$mail->ErrorInfo;
 }

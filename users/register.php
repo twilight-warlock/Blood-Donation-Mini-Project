@@ -108,7 +108,7 @@ include 'layout/navbar.php';
                     <div class="form-group">
                         <label class="form-label col-md-4">Mobile</label>
                         <div class="col-md-8">
-                            <input type="text" required="true" class="form-control" name="mobile" >
+                            <input type="number" required="true" class="form-control" name="mobile" >
                         </div>
                     </div>
                     <div class="form-group">

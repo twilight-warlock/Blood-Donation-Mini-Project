@@ -10,7 +10,7 @@ if(isset($_POST['loginBtn'])){
     
     $flag = $db->login($username, $password);
     if($flag){
-        header("Location: http://localhost/BDManagement/home.php");
+        header("Location: http://localhost/WP/Blood-Donation-Mini-Project/home.php");
     } else {
         $message = "Username or password was incorrect!";
     }

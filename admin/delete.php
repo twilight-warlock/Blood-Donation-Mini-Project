@@ -7,11 +7,11 @@ if (isset($_POST['yesBtn'])) {
     $flag = $db->remove($id);
 
     if ($flag) {
-        header("Location: http://localhost/BDManagement/admin/employee.php");
+        header("Location: http://localhost/WP/Blood-Donation-Mini-Project/admin/employee.php");
     }
 }
 if (isset($_POST['noBtn'])) {
-    header("Location: http://localhost/BDManagement/admin/employee.php");
+    header("Location: http://localhost/WP/Blood-Donation-Mini-Project/admin/employee.php");
 }
 
 $title = "Remove Employee";

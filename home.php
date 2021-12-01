@@ -97,7 +97,7 @@ include 'layout/_top_nav.php';
                         <?php foreach ($donors as $d): $i++; ?>
                         <tr class="<?php
                         if ($i % 2 == 0) {
-                            echo "bg-success";
+                            echo "bg-light";
                         } else {
                             echo "bg-danger";
                         }

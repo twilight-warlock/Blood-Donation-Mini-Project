@@ -12,7 +12,7 @@ if(isset($_POST['loginBtn'])){
         if($password == "123"){
             session_start();
             $_SESSION['username'] = $username;
-            header("Location: http://localhost/BDManagement/admin/home.php");
+            header("Location: http://localhost/WP/Blood-Donation-Mini-Project/admin/home.php");
         } else {
             $invalid = "Invalid Password!";
         }
