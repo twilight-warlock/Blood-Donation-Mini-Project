@@ -177,5 +177,6 @@ include 'layout/_top_nav.php';
         <div class="col-md-3"></div>
     </div>
 </div>
+<br><br>
 
 <?php include 'layout/_footer.php'; ?>
