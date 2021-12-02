@@ -13,5 +13,5 @@
         <script src="js/bootstrap.min.js"></script>
         <script src="js/myjs.js"></script>
     </head>
-    <body>
+    <body style="padding: 0; height:100%">
 
