@@ -16,7 +16,7 @@ if(isset($_POST['loginBtn'])){
     }
 }
 $title="Login";
-include 'layout/_header.php'; 
+include 'layout/_sigmaHeader.php'; 
 ?>
 <div style="background: url('https://media.istockphoto.com/photos/doctor-clicking-on-a-laptop-before-her-picture-id1292777576?b=1&k=20&m=1292777576&s=170667a&w=0&h=Tg1ASn3aw19DgyqjGaaWqJmPeXiDRaU1LW8c83Y5tbw='); width:100%; height:100vh; display: flex;align-items:center;justify-content:center; background-repeat:no-repeat; background-size:cover">
     <div class="container text-center">

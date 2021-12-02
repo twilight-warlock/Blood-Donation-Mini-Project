@@ -65,4 +65,3 @@ include 'layout/navbar.php';
     </div>
 </div>
 
-<?php include 'layout/_footer.php'; ?>
