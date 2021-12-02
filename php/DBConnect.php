@@ -26,13 +26,13 @@ class DBConnect {
     public function auth(){
         session_start();
         if(! isset($_SESSION['username'])){
-            header("Location: http://localhost/WP/Blood-Donation-Mini-Project");
+            header("Location: http://localhost/Blood-Donation-Mini-Project");
         }       
     }
     public function authLogin(){
         session_start();
         if(isset($_SESSION['username'])){
-            header("Location: http://localhost/WP/Blood-Donation-Mini-Project/home.php");
+            header("Location: http://localhost/Blood-Donation-Mini-Project/home.php");
         }
     }
     
@@ -95,7 +95,7 @@ class DBConnect {
     public function logout(){
         session_start();
         session_destroy();
-        header("Location: http://localhost/WP/Blood-Donation-Mini-Project/users/");
+        header("Location: http://localhost/Blood-Donation-Mini-Project/users/");
     }
     
     public function getDonorProfileById($id){
